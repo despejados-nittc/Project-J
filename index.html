@@ -11,8 +11,21 @@
 <body>
     <h1>Just Crazy MEDley予約システム</h1>
     <p>ようこそ、Just Crazy MEDley予約システムへ！</p>
-    <form action="">
-        <input type="time" name="time" required> 
+    <form action="reserve.html" id="reservation-form">
+        <div>
+            <label for="date">来場日</label>
+            <input type="date" name="date" id="date" min="2026-10-31" max="2026-11-01" required>
+        </div>
+        <div>
+            <label for="time">予約時間:</label>
+            <input type="time" name="time" id="time" required>
+        </div>
+        <div>
+            <label for="number-of-times">来場した回数:</label>
+            <input type="number" name="number-of-times" id="number-of-times" min="0" required>
+        </div>
+        <input type="submit" value="予約">
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
