@@ -6,15 +6,20 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
     </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>3J予約システム</title>
 </head>
 <body>
     <h1>Just Crazy MEDley予約システム</h1>
-    <p>予約が完了しました．</p>
-
-    <p>来場日：<span id="reserved-date"></span></p>
-    <p>予約時間：<span id="reserved-time"></span></p>
-    <p>来場回数：<span id="visit-count"></span></p>
+    <div class="waku">
+        <p>予約が完了しました．</p>
+        <p class="bango">予約番号</p>
+        <p><span id="reserved-number"></span></p>
+        <p>来場日：<span id="reserved-date"></span></p>
+        <p>予約時間：<span id="reserved-time"></span></p>
+        <p>来場回数：<span id="visit-count"></span></p>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

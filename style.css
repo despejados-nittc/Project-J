@@ -1,0 +1,57 @@
+/* 共通スタイル */
+body {
+  margin: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #64a5d0;
+  text-align: center;
+}
+.waku{
+    text-align: center;
+    border: #FFF;
+    background-color: #FFF;
+    padding: 25px;
+    width : 500px;
+    border-radius: 20px;
+}
+.bango{
+  color:#FFF;
+}
+input[type="submit"] {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: #3276a4;
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* PC向け (Flexboxで横並び) */
+@media (min-width: 601px) {
+  nav ul {
+    display: flex; /* 横並びにする指定 */
+    margin: 0 auto;
+  }
+  nav li {
+    flex: 1; /* 親要素の幅に合わせて均等（25%ずつ）に分配 */
+  }
+}
+
+/* スマホ向け (縦並び) */
+@media (max-width: 600px) {
+  nav {
+    border: 2px solid #3276a4;
+    border-radius: 40px;
+  }
+  nav ul {
+    display: flex; /* 縦並びにする指定 */
+  }
+  nav li {
+    flex: 1; /* 親要素の幅に合わせて均等（25%ずつ）に分配 */
+  }
+  nav li a {
+    padding: 10px 0; /* スマホ向けにパディングを調整 */
+    font-size: 15px; /* スマホ向けにフォントサイズを調整 */
+  }
+}
