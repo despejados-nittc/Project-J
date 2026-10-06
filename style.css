@@ -8,16 +8,29 @@ body {
   background-color: #64a5d0;
   text-align: center;
 }
+.yoyakubango{
+  font-size: 100px;
+  color:#3276a4;
+}
+table{
+  margin:0 auto;
+}
+.hyo{
+  border:1;
+  border-color: #64a5d0;
+  width:20%;
+  text-align: left;
+}
 .waku{
+    margin: 0 auto;
     text-align: center;
     border: #FFF;
     background-color: #FFF;
     padding: 25px;
-    width : 500px;
     border-radius: 20px;
 }
 .bango{
-  color:#FFF;
+  color:#000;
 }
 input[type="submit"] {
   padding: 5px 10px;
@@ -25,6 +38,9 @@ input[type="submit"] {
   background-color: #3276a4;
   color: #fff;
   border-radius: 10px;
+}
+h1{
+  color: #FFF;
 }
 
 /* PC向け (Flexboxで横並び) */

@@ -4,7 +4,6 @@ if(form){
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
         const time = document.getElementById("time").value;
-        const numberOfTimes = Number(document.getElementById("number-of-times").value);
         const date = document.getElementById("date").value; 
 
         const response = await fetch(
@@ -17,7 +16,6 @@ if(form){
                 body: JSON.stringify({
                     reservationDate: date,
                     reservationTime: time,
-                    numberOfTimes: numberOfTimes,
                 }),
             }
         )
@@ -28,7 +26,7 @@ if(form){
         const result = await response.json();
 
         const params = new URLSearchParams({
-            id: String(result.id),
+            token: result.accessToken,
         });
 
         window.location.href = `reserve.html?${params.toString()}`;
@@ -37,13 +35,13 @@ if(form){
 
 async function loadReservation(){
     const params = new URLSearchParams(location.search);
-    const id = params.get("id");
-    if(!id) {
+    const token = params.get("token");
+    if(!token) {
         console.error("予約がありません．");
         return;
     }
     const response = await fetch(
-        `http://localhost:8787/api/reservations/${id}`,
+        `http://localhost:8787/api/reservations?token=${token}`,
     );
 
     if(!response.ok){
@@ -55,7 +53,6 @@ async function loadReservation(){
     document.querySelector("#reserved-number").textContent = result.reservation.id;
     document.querySelector("#reserved-date").textContent = result.reservation.reservation_date;
     document.querySelector("#reserved-time").textContent = result.reservation.reservation_time;
-    document.querySelector("#visit-count").textContent = result.reservation.number_of_times;
 }   
 
 const reservedDate = document.querySelector("#reserved-date");
