@@ -8,19 +8,29 @@ body {
   background-color: #64a5d0;
   text-align: center;
 }
-.yoyakubango{
-  font-size: 100px;
-  color:#3276a4;
+
+.p1{
+  font-size: 30px;
 }
+
+.yoyakubango{
+  font-size: 150px;
+  font-weight: 800;
+  color:#3276a4;
+  line-height: 0.5;
+}
+
 table{
   margin:0 auto;
 }
+
 .hyo{
   border:1;
   border-color: #64a5d0;
-  width:20%;
+  width:0 auto;
   text-align: left;
 }
+
 .waku{
     margin: 0 auto;
     text-align: center;
@@ -29,16 +39,19 @@ table{
     padding: 25px;
     border-radius: 20px;
 }
+
 .bango{
   color:#000;
 }
+
 input[type="submit"] {
   padding: 5px 10px;
   font-size: 20px;
-  background-color: #3276a4;
+  background-color: #64a5d0;
   color: #fff;
   border-radius: 10px;
 }
+
 h1{
   color: #FFF;
 }
